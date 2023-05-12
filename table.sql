@@ -31,17 +31,3 @@ INSERT INTO evehicle (vid, vin, city, postal_code, model_year, make, model, ev_t
 ('10014','YV4BR0DL7N','Mount Vernon','98274','2022','VOLVO','XC60','Plug-in Hybrid Electric Vehicle (PHEV)',18,52900,'2022-02-02'),
 ('10015','JTDKARFP5L','Lake Stevens','98258','2020','TOYOTA','PRIUS PRIME','Plug-in Hybrid Electric Vehicle (PHEV)',25,28895,'2018-03-01');
 
-
-Modify the ejs code below or using index js code so that when user enter the starting number, ending 
-number, and divisible by number and hit the Calculate button, it calculate the sum by the example below:
-Example 1
-
-Starting Number = 1.
-
-Ending Number = 13.
-
-Divisible by = 3.
-
-The sum is 30 (3 + 6 + 9 + 12).--> Display message
-
-Please create a function and using loop.
