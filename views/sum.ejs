@@ -1,0 +1,38 @@
+<%- include("_header") -%>
+
+<h2>Calculate Sum of a Series Divisible by a Number</h2>
+
+
+<form action="/sum" method="POST">
+    <table>
+        <tr>
+            <td><label for="startNumber">Enter starting number:</label></td>
+            <td><input type="number" name="startNumber" id="startNumber" required value="<%= startNumber || '' %>" /></td>
+            <td>(Required)</td>
+        </tr>
+        <tr>
+            <td><label for="endNumber">Enter ending number:</label></td>
+            <td><input type="number" name="endNumber" id="endNumber" required value="<%= endNumber || '' %>" /></td>
+            <td>(Required)</td>
+        </tr>
+        <tr>
+            <td><label for="divisibleBy">Enter divisible number:</label></td>
+            <td><input type="number" name="divisibleBy" id="divisibleBy" required value="<%= divisibleBy || '' %>" /></td>
+            <td>(Required)</td>
+        </tr>
+        <% if (error) { %>
+            <tr>
+                <td colspan="3" style="color: red;"><%= error %></td>
+            </tr>
+        <% } %>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Calculate Sum" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+<%- include("_footer") -%>
+
+
