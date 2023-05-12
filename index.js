@@ -96,23 +96,3 @@ app.post("/input", upload.single('filename'), async (req, res) => {
 app.get("/sum", (req, res) => {
     res.render("sum");
 });
-
-app.post('/sum', (req, res) => {
-    const startNumber = parseInt(req.body.startNumber);
-    const endNumber = parseInt(req.body.endNumber);
-    const divisibleBy = parseInt(req.body.divisibleBy);
-
-    if (startNumber >= endNumber) {
-        res.render('sum', { error: 'Starting number must be less than the ending number' });
-        return;
-    }
-
-    let sum = 0;
-    for (let i = startNumber; i <= endNumber; i++) {
-        if (i % divisibleBy === 0) {
-            sum += i;
-        }
-    }
-
-    res.render('sum', { sum: sum });
-});
